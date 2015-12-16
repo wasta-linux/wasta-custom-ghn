@@ -1,0 +1,16 @@
+Source: wasta-custom-ghn
+Section: utils
+Priority: optional
+Maintainer: Wes Peacock <wes_peacock@sil.org>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.5
+
+Package: wasta-custom-ghn
+Architecture: all
+Depends: ibus-gtk, ibus-gtk3, ibus-kmfl, ${shlibs:Depends}, ${misc:Depends}
+Description: Wasta-Linux Ghana Customization
+ Sets up machine for Wasta-Linux Ghana use.
+ This includes:
+    wasta-english-intl-defaults.oxt: installs shared LibreOffice extension w/
+        International English defaults.
+        Ghana kmfl keyboards
