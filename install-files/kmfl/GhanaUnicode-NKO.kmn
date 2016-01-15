@@ -11,7 +11,7 @@ c          grep -E  "(GHN)|(EWE)" GhanaUnicodeNFD.kmn >GhanaUnicode-EWE.kmn
 store(&Version) "7.0"                                       c GHN
 store(&Name) "Ghana Unicode - Nkonya"                             c NKO
 store(&Message) "Ghana Unicode - Version 7.0 - Nkonya Variant" c NKO
-store(&Bitmap) "GhanaUnicode-NKO"                              c NKO
+store(&Bitmap) "GhanaUnicode-NKO.bmp"                              c NKO
 begin Unicode >	use(Main)                                  c GHN
 group(Main) using keys                                         c GHN
 '\' + 'q' >	'\q'	c allow easy typing of \q for scriptures   c GHN

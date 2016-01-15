@@ -13,7 +13,7 @@ c          grep -E  "(GHN)|(EWE)" GhanaUnicodeNFD.kmn >GhanaUnicode-EWE.kmn
 store(&Version) "7.0"                                       c GHN
 store(&Name) "Ghana Unicode Short"                           c Short
 store(&Message) "Ghana Unicode - Version 7.0 - Short"          c Short
-store(&Bitmap) "GhanaUnicode-Short"                            c Short
+store(&Bitmap) "GhanaUnicode-Short.bmp"                            c Short
 store(&Hotkey) "^%U"                                           c Short
 begin Unicode >	use(Main)                                  c GHN
 group(Main) using keys                                         c GHN
