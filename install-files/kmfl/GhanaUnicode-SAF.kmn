@@ -1,0 +1,48 @@
+c 2016/01/07 Add Safaliba (occasionally misspelled SAFaliba to include comments in the grep)
+c  lines in all languages are commented GHN, specific lines are commented TLA 
+c       grep -E "(GHN)|(Short)" Ghana6UnicodeNFD.kmn >GhanaUnicode-Short.kmn 
+c       grep -E  "(GHN)|(FULL)" Ghana6UnicodeNFD.kmn >GhanaUnicode-FULL.kmn 
+c       grep -E  "(GHN)|(TLA)" Ghana6UnicodeNFD.kmn >GhanaUnicode-TLA.kmn
+c          grep -E  "(GHN)|(DAG)" Ghana6UnicodeNFD.kmn >GhanaUnicode-DAG.kmn
+c          grep -E  "(GHN)|(NKO)" Ghana6UnicodeNFD.kmn >GhanaUnicode-NKO.kmn
+c          grep -E  "(GHN)|(BUD)" Ghana6UnicodeNFD.kmn >GhanaUnicode-BUD.kmn
+c          grep -E  "(GHN)|(NCU)" Ghana6UnicodeNFD.kmn >GhanaUnicode-NCU.kmn
+c          grep -E  "(GHN)|(EWE)" GhanaUnicodeNFD.kmn >GhanaUnicode-EWE.kmn
+c          grep -E  "(GHN)|(SAF)" Ghana6UnicodeNFD.kmn >GhanaUnicode-SAF.kmn
+store(&Version) "7.0"                                       c GHN
+store(&Name) "Ghana Unicode - Safaliba"                             c SAF
+store(&Message) "Ghana Unicode - Version 7.0 - Safaliba Variant" c SAF
+store(&Bitmap) "GhanaUnicode-SAF.bmp"                              c SAF
+begin Unicode >	use(Main)                                  c GHN
+group(Main) using keys                                         c GHN
+'\' + 'q' >	'\q'	c allow easy typing of \q for scriptures   c GHN
++ "[" > U+025B                                           c GHN
+";" + "[" > "["                                                c GHN
++ "{" > U+0190                                           c GHN
+";" + "{" > "{"                                               c GHN
++ "]" > U+0254                                            c GHN
+";" + "]" > "]"                                                c GHN
++ "}" > U+0186                                           c GHN
+";" + "}" > "}"                                                c GHN
++ "=" > U+014B                                          c GHN
+";" + "=" > "="                                             c GHN
++ "+" > U+014A                                          c GHN
+";" + "+" > "+"                                              c GHN
+";" + "x" > "x"                                               c NKO FULL SAF
+";" + "X" > "X"                                              c NKO FULL SAF
+";" + "q" > "q"                                                c NKO FULL EWE SAF
+";" + "Q" > "Q"                                               c NKO FULL EWE SAF
+ c  SAFaliba uses x & q for e & o macron below (underline)
++ "x" > "e" U+0331  c e underline                  c SAF
++ "X" >  "E" U+0331  c E underline                c SAF
++ "q" >  "o" U+0331  c o underline                c SAF
++ "Q" > "O" U+0331  c O underline                     c SAF
+";" + "'" > "'"                                                c FULL BUD EWE NKO FULL SAF
+c SAFaliba Acute Accent High Tone typed after the character
++ "'" > U+301                                                c SAF
+";" + "`" > "`"                                                           c FULL  BUD EWE SAF
+c SAFaliba Grave Accent/Low Tone typed after the character
++ "`" > U+300                                                c SAF
+";" + "~" > "~"                                                        c FULL SAF
+c SAFaliba Nasalization typed after the character
++ "~" > U+303                                                c SAF
