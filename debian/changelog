@@ -1,3 +1,9 @@
+wasta-custom-ghn (1.0.1) trusty; urgency=medium
+
+  * kmfl add Safaliba SAF, change icon file names in .kmn files
+
+ -- Wes Peacock <wes_peacock@sil.org>  Sat, 16 Jan 2016 21:56:20 -0700
+
 wasta-custom-ghn (1.0.0) trusty; urgency=medium
 
   * kmfl Ghana Short, Nkonya NKO, Nkonya Phonetic NK1
