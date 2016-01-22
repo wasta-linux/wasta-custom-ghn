@@ -1,5 +1,6 @@
-c 2016/01/07 Add Safaliba (occasionally misspelled SAFaliba to include comments in the grep)
+c 2016/01/21 Simplify FULL
 c  lines in all languages are commented GHN, specific lines are commented TLA
+c FULL - Keyboard as released by GILLBT IT in Feb 2009 - with corrections
 c       grep -E "(GHN)|(Short)" Ghana7UnicodeNFD.kmn >GhanaUnicode-Short.kmn
 c       grep -E  "(GHN)|(FULL)" Ghana7UnicodeNFD.kmn >GhanaUnicode-FULL.kmn
 c       grep -E  "(GHN)|(TLA)" Ghana7UnicodeNFD.kmn >GhanaUnicode-TLA.kmn
@@ -10,9 +11,9 @@ c          grep -E  "(GHN)|(NCU)" Ghana7UnicodeNFD.kmn >GhanaUnicode-NCU.kmn
 c          grep -E  "(GHN)|(EWE)" Ghana7UnicodeNFD.kmn >GhanaUnicode-EWE.kmn
 c          grep -E  "(GHN)|(SAF)" Ghana7UnicodeNFD.kmn >GhanaUnicode-SAF.kmn
 store(&Version) "7.0"                                       c GHN
-store(&Name) "Ghana Unicode - Safaliba"                             c SAF
-store(&Message) "Ghana Unicode - Version 7.0 - Safaliba Variant" c SAF
-store(&Bitmap) "GhanaUnicode-SAF.bmp"                              c SAF
+store(&Name) "Ghana Unicode - Full"                           c FULL
+store(&Message) "Ghana Unicode - Version 7.0 - FULL"          c FULL
+store(&Bitmap) "GhanaUnicode.bmp"                            c FULL
 begin Unicode >	use(Main)                                  c GHN
 group(Main) using keys                                         c GHN
 '\' + 'q' >	'\q'	c allow easy typing of \q for scriptures   c GHN
@@ -28,15 +29,24 @@ group(Main) using keys                                         c GHN
 ";" + "=" > "="                                             c GHN
 + "+" > U+014A                                          c GHN
 ";" + "+" > "+"                                              c GHN
++ "x" > U+0269  c iota                                 c NKO FULL
 ";" + "x" > "x"                                               c NKO FULL SAF
++ "X" > U+0196  c Iota                                c NKO FULL
 ";" + "X" > "X"                                              c NKO FULL SAF
++ "q" > U+028B c upsilon                            c NKO  FULL EWE
 ";" + "q" > "q"                                                c NKO FULL EWE SAF
++ "Q" > U+01B2  c Upsilon                          c NKO FULL EWE
 ";" + "Q" > "Q"                                               c NKO FULL EWE SAF
- c  SAFaliba uses x & q for e & o macron below (underline)
-+ "x" > "e" U+0331  c e underline                  c SAF
-+ "X" >  "E" U+0331  c E underline                c SAF
-+ "q" >  "o" U+0331  c o underline                c SAF
-+ "Q" > "O" U+0331  c O underline                     c SAF
+";" + "d" > U+0256 c retroflexed d                             c EWE FULL
+";" + "D" > U+0189 c Retroflexed D                             c EWE FULL
+";" + "f" > U+0192 c voiceless bilabial fricative              c EWE FULL
+";" + "F" > U+0191 c Voiceless Bilabial Fricative              c EWE FULL
+";" + "e" > U+0259 c schwa                                     c LIP??? FULL
+";" + "E" > U+018E c Schwa                                     c LIP??? FULL
+";" + "g" > U+0263 c gamma                                     c DAG FULL
+";" + "G" > U+0194 c Gamma                                   c DAG FULL
+";" + "z" > U+0292 c ezh                                           c DAG FULL
+";" + "Z" > U+01B7 c Ezh                                         c DAG FULL
 ";" + "'" > "'"                                                c FULL BUD EWE SAF
 c FULL SAFaliba Acute Accent High Tone typed after the character
 + "'" > U+301                                                c FULL SAF
@@ -46,3 +56,10 @@ c FULL SAFaliba Grave Accent/Low Tone typed after the character
 ";" + "~" > "~"                                                        c FULL SAF
 c FULL SAFaliba Nasalization typed after the character
 + "~" > U+303                                                c FULL SAF
+";" + "^" > "^"                                                          c FULL
+c FULL Circumflex typed after the character
++ "^" > U+302                                                c FULL
+c FULL Underscore used for Macron under diacritic
+";" + "_" > "_"                                                          c FULL
+c FULL Underscore typed after the character
++ "_" > U+331                                                c FULL

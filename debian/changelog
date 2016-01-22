@@ -1,3 +1,14 @@
+wasta-custom-ghn (1.0.2) trusty; urgency=medium
+
+  * Add Ghana Full keyboard
+  * Add PDF for Safaliba
+  * Use PDFs generated from Markdown at:
+        https://github.com/WesPeacock/GhanaKeyboards
+  * Rename PDFs to descriptive names
+  * Nkonya Keyboard ;<apostrophe> removed
+
+ -- Wes Peacock <wes_peacock@sil.org>  Fri, 22 Jan 2016 09:45:08 -0700
+
 wasta-custom-ghn (1.0.1) trusty; urgency=medium
 
   * kmfl add Safaliba SAF, change icon file names in .kmn files
